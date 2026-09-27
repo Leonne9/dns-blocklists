@@ -1,0 +1,57 @@
+name: Update and publish DNS blocklists
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '17 */6 * * *'
+  push:
+    branches: [main]
+    paths:
+      - 'pipeline.py'
+      - 'sources.json'
+      - 'README.md'
+      - 'LICENSE*'
+      - '.github/workflows/update.yml'
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+concurrency:
+  group: dns-blocklists-pages
+  cancel-in-progress: false
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Unit tests
+        run: python3 pipeline.py test
+      - name: Generate and validate full release
+        run: python3 pipeline.py build
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+          retention-days: 1
+      - name: Publish complete release
+        id: deploy
+        uses: actions/deploy-pages@v4
+      - name: Verify every production URL
+        run: |
+          BUILD_ID=$(python3 -c "import json; print(json.load(open('_site/lists/manifest.json'))['build_id'])")
+          for attempt in 1 2 3 4 5; do
+            if python3 pipeline.py verify --expected "$BUILD_ID"; then exit 0; fi
+            sleep 20
+          done
+          exit 1
+      - name: Save last known good checkpoint
+        run: |
+          python3 pipeline.py checkpoint
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add PROJECT_STATUS.md state.json LAST_KNOWN_GOOD_BUILD.json PRODUCTION_TESTS.json
+          git diff --cached --quiet || git commit -m 'Checkpoint verified public blocklists [skip ci]'
+          git push

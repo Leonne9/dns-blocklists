@@ -1,14 +1,14 @@
 # STATUS DO PROJETO
 
-Última atualização: 2026-09-27T19:40:08.917015+00:00
-Etapa atual: implementação
-Percentual aproximado concluído: 15%
+Última atualização: 2026-09-28T00:22:19.250945+00:00
+Etapa: Pages habilitado; publicação pendente
+Progresso aproximado: 85%
 
-CONCLUÍDO: repositório público, pesquisa inicial, configuração de 9 feeds, licenças.
-EM EXECUÇÃO: downloader, validação, normalização, deduplicação, divisão.
-PENDENTE: testes, build inicial, automação, deploy, testes HTTP públicos.
-PROBLEMAS ENCONTRADOS: nenhum bloqueio atual.
-DECISÕES: Python sem dependências; arquivos até 4.200.000 bytes; fontes opcionais separadas; GitHub Pages + Actions gratuito.
-SERVIÇOS: GitHub público com runners padrão.
-LAST_KNOWN_GOOD_BUILD: nenhum.
-NEXT_ACTION: implementar e testar pipeline; habilitar Pages via Actions.
+CONCLUÍDO: pipeline, 9 testes unitários, build local validado, 9 fontes, 39 partes + master, workflow a cada 6h, Pages habilitado e HTTPS obrigatório.
+EM EXECUÇÃO: deploy inicial.
+PENDENTE: testes HTTP em cada arquivo, checkpoint público validado.
+PROBLEMAS: primeira execução falhou porque Pages não estava habilitado; corrigido.
+DECISÕES: GitHub público, gratuito, sem domínio próprio.
+SERVIÇOS: GitHub Pages/Actions.
+LAST_KNOWN_GOOD_BUILD público: nenhum.
+NEXT_ACTION: publicar o código mais recente e acompanhar workflow; testar cada URL.

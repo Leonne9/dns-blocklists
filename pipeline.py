@@ -180,7 +180,7 @@ def build():
     if len([s for s in reports if s['category']=='gambling' and s['status']!='unavailable'])<2: raise ValueError('Fewer than two gambling sources')
     for c in CATS:
         if not buckets[c]: raise ValueError('Missing initial category '+c)
-    manifest={'version':VERSION,'build_id':build_id,'timestamp_utc':stamp,'next_update_expected':(dt.datetime.now(dt.timezone.utc)+dt.timedelta(hours=cfg['interval_hours'])).isoformat(),'frequency_hours':cfg['interval_hours'],'status':'degraded' if any(s['status']!='ok' for s in reports) else 'ok','sources':reports,'unavailable_sources':[s['id'] for s in reports if s['status']!='ok'],'categories':{},'files':[],'source_url':'https://github.com/Leonne9/dns-blocklists','licenses':['LICENSE','LICENSE-BLP.txt','LICENSE-StevenBlack.txt']}
+    manifest={'version':VERSION,'build_id':build_id,'timestamp_utc':stamp,'next_update_expected':(dt.datetime.now(dt.timezone.utc)+dt.timedelta(hours=cfg['interval_hours'])).isoformat(),'frequency_hours':cfg['interval_hours'],'status':'degraded' if any(s['status']!='ok' for s in reports) else 'ok','sources':reports,'unavailable_sources':[s['id'] for s in reports if s['status']!='ok'],'categories':{},'files':[],'source_url':'https://github.com/Leonne9/dns-blocklists','licenses':['LICENSE','LICENSE-BLP.txt','LICENSE-StevenBlack.txt','LICENSE-hostsVN.txt']}
     global_unique=set().union(*buckets.values())
     total_valid=sum(s.get('valid_entries',0) for s in reports);raw=sum(s.get('raw_entries',0) for s in reports);excluded=sum(s.get('safety_excluded',0) for s in reports)
     manifest.update(raw_entries=raw,valid_entries=total_valid,invalid_entries=sum(s.get('invalid_entries',0) for s in reports),unique_entries=len(global_unique),duplicates_removed=total_valid-excluded-len(global_unique),safety_excluded=excluded)
@@ -209,7 +209,7 @@ def build():
             p=out/'lists/gambling-master.txt';p.write_text(header+'\n'.join(rules)+'\n');manifest['files'].append(metadata(p,base,cat,len(rules),True))
     manifest['file_count']=len(manifest['files']);manifest['adguard_file_count']=sum(not f['master'] for f in manifest['files']);manifest['largest_adguard_file_bytes']=max(f['bytes'] for f in manifest['files'] if not f['master'])
     manifest['unique_rules_per_layer_total']=sum(c['rules'] for c in manifest['categories'].values())
-    for name in ['sources.json','LICENSE','LICENSE-BLP.txt','LICENSE-StevenBlack.txt','README.md','pipeline.py']:
+    for name in ['sources.json','LICENSE','LICENSE-BLP.txt','LICENSE-StevenBlack.txt','LICENSE-hostsVN.txt','README.md','pipeline.py']:
         if (ROOT/name).exists():shutil.copy2(ROOT/name,out/name)
     validate(out,manifest,cfg);manifest['local_validation']={'result':'passed','checked_files':manifest['file_count'],'checks':['UTF-8','strict DNS rules','no HTML','no duplicates within category','byte limit','SHA-256','complete categories','master equality','source anomalies']}
     dump(out/'lists/manifest.json',manifest);(out/'.nojekyll').touch();render_status(out,manifest)
@@ -286,6 +286,28 @@ class Tests(unittest.TestCase):
         s={'min_entries':100,'max_entries':100000}
         for n in [0,120,99999,100001]:
             with self.assertRaises(ValueError):check_anomaly(n,s,1000)
+    def test_upstream_failure_preserves_cache(self):
+        from unittest.mock import patch
+        source={'id':'fixture','url':'https://upstream.example/list','format':'adguard','category':'gambling','max_bytes':1000,'min_entries':1,'max_entries':100}
+        cfg={'site_url':'https://publisher.example'}
+        with tempfile.TemporaryDirectory() as td, patch.dict(globals(),ROOT=Path(td)):
+            with patch(__name__+'.fetch',return_value=(b'||example.org^\n',{})):
+                values,report=source_load(source,cfg,{})
+                self.assertEqual(report['status'],'ok')
+            for failure in [RuntimeError('HTTP 404'),RuntimeError('timeout')]:
+                with patch(__name__+'.fetch',side_effect=failure):
+                    old,status=source_load(source,cfg,{})
+                    self.assertEqual(old,values);self.assertEqual(status['status'],'stale')
+            with patch(__name__+'.fetch',return_value=(b'<html>broken</html>',{})):
+                old,status=source_load(source,cfg,{})
+                self.assertEqual(old,values);self.assertEqual(status['status'],'stale')
+    def test_generation_rejects_missing_or_oversize(self):
+        with tempfile.TemporaryDirectory() as td:
+            out=Path(td);(out/'lists').mkdir();p=out/'lists/gambling-01.txt';p.write_text('||example.org^\n')
+            f=metadata(p,'https://publisher.example','gambling',1)
+            m={'files':[f],'categories':{'gambling':{'rules':1}}}
+            with self.assertRaises(ValueError):validate(out,m,{'hard_limit_bytes':10,'max_part_bytes':9})
+            with self.assertRaises((ValueError,FileNotFoundError)):validate(out,m,{'hard_limit_bytes':100,'max_part_bytes':90})
     def test_tld_protection(self):
         self.assertEqual(domain('casino',True),'casino')
         self.assertEqual(safety({'com','adguard-dns.com','x.adguard-dns.com','bad.example.org'},{'protected_domains':['com','adguard-dns.com'],'protected_subtrees':['adguard-dns.com']})[0],{'bad.example.org'})

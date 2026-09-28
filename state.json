@@ -1,27 +1,25 @@
 {
-  "project_version": "0.1.0",
-  "last_checkpoint": "2026-09-28T00:22:19.250945+00:00",
-  "current_stage": "pages_enabled_ready_for_deploy",
+  "project_version": "1.0.0",
+  "last_checkpoint": "2026-09-28T00:25:19.715919Z",
+  "current_stage": "published_and_verified",
   "completed_stages": [
-    "repository_creation",
-    "source_configuration",
-    "license_review",
-    "pipeline",
-    "unit_tests",
-    "initial_build",
+    "sources",
+    "normalization",
+    "deduplication",
+    "size_splitting",
+    "validation",
     "scheduled_workflow",
-    "pages_enabled"
-  ],
-  "pending_stages": [
     "deployment",
-    "production_http_tests"
+    "public_http_tests",
+    "documentation"
   ],
+  "pending_stages": [],
   "sources_configured": 9,
   "sources_working": 9,
   "unique_rules": 5380203,
   "generated_files": 40,
-  "deployment_status": "not_started",
-  "last_successful_build": "20260927T194510.804067Z",
-  "LAST_KNOWN_GOOD_BUILD": null,
-  "next_action": "Upload latest pipeline, license notices and checkpoint; run the existing Actions workflow."
+  "deployment_status": "verified",
+  "last_successful_build": "20260928T002307.902267Z",
+  "LAST_KNOWN_GOOD_BUILD": "20260928T002307.902267Z",
+  "next_action": "Check the last Actions run and public manifest; do not recreate infrastructure."
 }

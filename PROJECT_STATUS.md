@@ -1,6 +1,6 @@
 # STATUS DO PROJETO
 
-Última atualização: 2026-11-06T06:57:55.450345Z
+Última atualização: 2026-11-06T19:30:50.805662Z
 Etapa atual: publicado e verificado
 Percentual aproximado concluído: 100% da infraestrutura; ativação no AdGuard é separada.
 
@@ -10,5 +10,5 @@ PENDENTE: cadastrar URLs no AdGuard e conferir limite de listas/regras da conta.
 PROBLEMAS: []
 DECISÕES: GitHub Pages e Actions públicos; sem serviços pagos.
 SERVIÇOS: GitHub.
-LAST_KNOWN_GOOD_BUILD: 20261106T065543.206065Z
+LAST_KNOWN_GOOD_BUILD: 20261106T192838.626151Z
 NEXT_ACTION: verificar último Actions, state.json e manifesto; continuar sem recriar projeto.

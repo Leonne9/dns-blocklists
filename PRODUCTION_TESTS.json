@@ -1,6 +1,6 @@
 {
-  "verified_at": "2026-11-15T18:57:36.115681Z",
-  "build_id": "20261115T185524.101890Z",
+  "verified_at": "2026-11-16T06:42:16.496939Z",
+  "build_id": "20261116T064042.565955Z",
   "result": "passed",
   "files": [
     {
@@ -10,9 +10,9 @@
       "authentication": false,
       "cookies_sent": false,
       "content_type": "text/plain",
-      "bytes": 4199990,
-      "sha256": "268cf1bb954f0f1ad5ccbeee32175032ba3cec75abcc5121d813597ddf68485f",
-      "rules": 221519,
+      "bytes": 4199994,
+      "sha256": "99ccaa99b760e3a1720c9b71e01280cdb703f20e52b9438bfb5d6c0d32e6063a",
+      "rules": 221520,
       "result": "passed"
     },
     {
@@ -22,9 +22,9 @@
       "authentication": false,
       "cookies_sent": false,
       "content_type": "text/plain",
-      "bytes": 4199989,
-      "sha256": "26b98e7fca496d81ae9a11b4d9aa9929962046c738c683111a860bfebd43883e",
-      "rules": 197196,
+      "bytes": 4199987,
+      "sha256": "b52e9f38a8efb4798e817c4d209fba1d4a64b96dc7dd5b11a11cb141926cfe41",
+      "rules": 197201,
       "result": "passed"
     },
     {
@@ -34,9 +34,9 @@
       "authentication": false,
       "cookies_sent": false,
       "content_type": "text/plain",
-      "bytes": 4199972,
-      "sha256": "b4bcd317844ec621f5930a8edf0a9d0d1b0994f1fdce1f49135bbe5ca58fa705",
-      "rules": 191727,
+      "bytes": 4199984,
+      "sha256": "d19a7db9a1ad12a9d74d897bac7679756b09027a9d1fefde79a8a70976213ce5",
+      "rules": 191744,
       "result": "passed"
     },
     {
@@ -46,9 +46,9 @@
       "authentication": false,
       "cookies_sent": false,
       "content_type": "text/plain",
-      "bytes": 1329758,
-      "sha256": "b954c4d98c786ba70444ebb2f8a2fa94b6e6d4906613eced99aab49b189d138b",
-      "rules": 64440,
+      "bytes": 1331433,
+      "sha256": "dbcb4513d15855c6d955063970d2c5d734b332eee0ce27f58253a3cca1d33e6b",
+      "rules": 64498,
       "result": "passed"
     },
     {
@@ -58,9 +58,9 @@
       "authentication": false,
       "cookies_sent": false,
       "content_type": "text/plain",
-      "bytes": 13928935,
-      "sha256": "05f7fcac18974679d49481ed304da2a7ce365e096e0d8feec273638e1c543425",
-      "rules": 674882,
+      "bytes": 13930624,
+      "sha256": "60212e558ed1e9d931de6d7d6dae2d7f8d3cb57d822f35e4823027a5b01df6b8",
+      "rules": 674963,
       "result": "passed"
     },
     {
@@ -70,9 +70,9 @@
       "authentication": false,
       "cookies_sent": false,
       "content_type": "text/plain",
-      "bytes": 344749,
-      "sha256": "eb9d293f0f5ee4b9b3bfd5d18bd1562999f72594501eb792d0c4bb37fb1af472",
-      "rules": 16538,
+      "bytes": 342078,
+      "sha256": "8e624b3c4eaf210b2ca0850ad80d0a2cc985d46a9de7dcdd5557e27c2144734d",
+      "rules": 16447,
       "result": "passed"
     },
     {
@@ -83,7 +83,7 @@
       "cookies_sent": false,
       "content_type": "text/plain",
       "bytes": 4199998,
-      "sha256": "75fe914b00ae610fcf2d8073a9062a6397d0af01af6e349cdf98cc0a9e211af1",
+      "sha256": "a5e07fd91983f968ac6940b99b5f3a2bd187867f9c09549c008fd6cb8b8b2283",
       "rules": 235318,
       "result": "passed"
     },
@@ -95,7 +95,7 @@
       "cookies_sent": false,
       "content_type": "text/plain",
       "bytes": 4199987,
-      "sha256": "0ab4a506fd7ab65b4f469c5c3b5e335d03c1afdf0f03badb0543026a94aa7279",
+      "sha256": "87676526ac81669b998ef19ab04a34a14c28aa51f910b42723c6e0b8b0b6a8c8",
       "rules": 210425,
       "result": "passed"
     },
@@ -107,7 +107,7 @@
       "cookies_sent": false,
       "content_type": "text/plain",
       "bytes": 4199979,
-      "sha256": "c8b0a0c7d76783ef3b8f1bc2cf49376e41aa64cc0b444418b859072ee6baa896",
+      "sha256": "8b3ef70c0ee13f232ce031eefefb3c048f1e4e68583f4cf3360e78a6d5a9dbf5",
       "rules": 211705,
       "result": "passed"
     },
@@ -119,7 +119,7 @@
       "cookies_sent": false,
       "content_type": "text/plain",
       "bytes": 4199990,
-      "sha256": "bca9139c1686fb7c4f3feff8ffcf03d4002c2263cb64e914d67f8a92d94d1736",
+      "sha256": "b3f44c7994811cf45091be0c24312010a48e318867e0049c8ec17c13fe8ea5e9",
       "rules": 213740,
       "result": "passed"
     },
@@ -131,7 +131,7 @@
       "cookies_sent": false,
       "content_type": "text/plain",
       "bytes": 4199998,
-      "sha256": "e0206e0d59e27cda6626be457913d34a63c2a2e300a3fd4584de19e259c34782",
+      "sha256": "966423685e3a58fb5d3f347605329988f44f43e746a73d59e76d9057e357d493",
       "rules": 219664,
       "result": "passed"
     },
@@ -143,7 +143,7 @@
       "cookies_sent": false,
       "content_type": "text/plain",
       "bytes": 4199996,
-      "sha256": "aa40f37b76c48cb32506e8ab5cfb1073886b94069461360bbf4bd0e6fee55986",
+      "sha256": "a74a4bcc513451a3bc9cada10fc907325c288b000e9a0e766beba9e2fac178b7",
       "rules": 215201,
       "result": "passed"
     },
@@ -155,7 +155,7 @@
       "cookies_sent": false,
       "content_type": "text/plain",
       "bytes": 4200000,
-      "sha256": "1155476743e27c2803c674bdba1ab32011307783b51f035f9e14406db9c8f8bf",
+      "sha256": "c4a8e856d310517f3d164b12527d39356fc49c1f07fd41a563e1554ddf5b231a",
       "rules": 218284,
       "result": "passed"
     },
@@ -167,7 +167,7 @@
       "cookies_sent": false,
       "content_type": "text/plain",
       "bytes": 4199991,
-      "sha256": "de65f7070b69fee4e79b191856507b7705f7939bb5d19076cbdc67832738b87d",
+      "sha256": "be003100edef06b7ca5ad7892bf6f9c87fa757d19fb8318aada018f68780309e",
       "rules": 211554,
       "result": "passed"
     },
@@ -179,7 +179,7 @@
       "cookies_sent": false,
       "content_type": "text/plain",
       "bytes": 4199983,
-      "sha256": "f658e81aea0ed584ba714046094e44d41d3eeae5891da3b12abfab7f48852391",
+      "sha256": "8b584905247180fbf6a5a036307c3f0e5d4ac132963914ec5870444c87791eb0",
       "rules": 210987,
       "result": "passed"
     },
@@ -191,7 +191,7 @@
       "cookies_sent": false,
       "content_type": "text/plain",
       "bytes": 4199998,
-      "sha256": "d2c8abc239fac0562795903336405fe29ef34974abdce0707387f90dd149f0c6",
+      "sha256": "41b3e096d6affe034ab89c7f7c61197aa427c24b309ad940dc029fdab86fccc8",
       "rules": 211300,
       "result": "passed"
     },
@@ -203,7 +203,7 @@
       "cookies_sent": false,
       "content_type": "text/plain",
       "bytes": 4199997,
-      "sha256": "99bb72d317c638bdb6140e81f33e2bd3174045493883a25feb2e02037203cb87",
+      "sha256": "6346e63f047aad3770bd7c37c424dfa08d78af8fd85dde6547d17725eb039902",
       "rules": 227372,
       "result": "passed"
     },
@@ -215,7 +215,7 @@
       "cookies_sent": false,
       "content_type": "text/plain",
       "bytes": 1040074,
-      "sha256": "57f0bb4b58aa5c1cc6da2bdd138a3988de97a149f6af9123fd1527422816b07c",
+      "sha256": "8b7f181144669daa88d26d741824e147acbdb643a047ddc861e31f6e183f599d",
       "rules": 53396,
       "result": "passed"
     },
@@ -227,7 +227,7 @@
       "cookies_sent": false,
       "content_type": "text/plain",
       "bytes": 24266,
-      "sha256": "c780a72d150d76834fde58d1adf49c22169ab01d676ab6bb9181f907ce22de5e",
+      "sha256": "22d29149930a3e271b54823f433c2c3ae22cc146f057ea7e100fa6d801501c23",
       "rules": 1518,
       "result": "passed"
     },
@@ -239,7 +239,7 @@
       "cookies_sent": false,
       "content_type": "text/plain",
       "bytes": 1467,
-      "sha256": "da1ec710aee23c02b2297d85c23854f916c6e167be344596a7c0b83fd25257d4",
+      "sha256": "c42f2bee8ad99253e0b728b48e4b9a571cf9867340ad8589d7e0278a841593fc",
       "rules": 127,
       "result": "passed"
     },
@@ -250,9 +250,9 @@
       "authentication": false,
       "cookies_sent": false,
       "content_type": "text/plain",
-      "bytes": 137371,
-      "sha256": "35a824a1a1e84a3b72158b674de94b57ca1b39dd7693d9151466ad282c0c81ba",
-      "rules": 9762,
+      "bytes": 137381,
+      "sha256": "14cb429a1e90d2d568b276d6fd285dcab7090e3f834de9ead1685e65db1fceb0",
+      "rules": 9763,
       "result": "passed"
     },
     {
@@ -263,7 +263,7 @@
       "cookies_sent": false,
       "content_type": "text/plain",
       "bytes": 4199991,
-      "sha256": "77698a228fdc56789d569cf3b9dd5bd54e4b17d1f185876ed1c4292a1ce5511b",
+      "sha256": "af603eca4dbb23911102dce6fcbb79605c3281fb5219e15900c3efed070b8a90",
       "rules": 160979,
       "result": "passed"
     },
@@ -275,7 +275,7 @@
       "cookies_sent": false,
       "content_type": "text/plain",
       "bytes": 4199998,
-      "sha256": "4962a33099f0f73fe67fc1470d33a20e8cc076aeab78ffd3b098ef63818906e8",
+      "sha256": "702b29a62f9cb51ae3c55a3b83eb12d1dbcc51e2875980ff6e4bab38882de951",
       "rules": 161850,
       "result": "passed"
     },
@@ -287,7 +287,7 @@
       "cookies_sent": false,
       "content_type": "text/plain",
       "bytes": 4199994,
-      "sha256": "f86737bdb795a6957620a0475ef857340fa495c0e699edddde461d89f70c2095",
+      "sha256": "a232954cd52397f502465f2fe8fb5ca246a0eb1fdcd0e8b5c09f832fb47eb4a9",
       "rules": 159098,
       "result": "passed"
     },
@@ -299,7 +299,7 @@
       "cookies_sent": false,
       "content_type": "text/plain",
       "bytes": 4199992,
-      "sha256": "cf382826b5d30151010a32386c0c08896acb7c5d208589d2773e72e14f0f7a52",
+      "sha256": "6cdf9f46589f67ab401f28d79469ef14e16a8d14fb1361810529a796b98f2aee",
       "rules": 160665,
       "result": "passed"
     },
@@ -311,7 +311,7 @@
       "cookies_sent": false,
       "content_type": "text/plain",
       "bytes": 4199977,
-      "sha256": "d9e8560d74e5ee898e7d4137540a24d4d71bafb4d76ac268812d88b0282a083c",
+      "sha256": "31e99ea815b5c685ff83c1cdb3c8699c6b58f590c65341914871103fec508cd5",
       "rules": 162482,
       "result": "passed"
     },
@@ -323,7 +323,7 @@
       "cookies_sent": false,
       "content_type": "text/plain",
       "bytes": 4199980,
-      "sha256": "37a54c183cf2a022affca908b13cd2a4807078067c1d334763d616f70dc22eda",
+      "sha256": "5cdcd238d975ee0d9fc81141323ca640629656eb6b7ba99a26513f63095df26b",
       "rules": 161271,
       "result": "passed"
     },
@@ -335,7 +335,7 @@
       "cookies_sent": false,
       "content_type": "text/plain",
       "bytes": 4199991,
-      "sha256": "f05c510518e43f37990bd1fa310bdef57efc13692704abc616aca97017cc3f50",
+      "sha256": "3fc179978ffb1a2d96395abd3972189034f113b54147fa08596c05e98d521958",
       "rules": 161883,
       "result": "passed"
     },
@@ -347,7 +347,7 @@
       "cookies_sent": false,
       "content_type": "text/plain",
       "bytes": 4199998,
-      "sha256": "82d5045b0f423e49de1817ceffd0fecb9396213b8d40284b5b334a92984c8aac",
+      "sha256": "00dd083e108c722308a7d9b201ec5dd04c1e8bbfd4e7b91539451a61b0d82bab",
       "rules": 159903,
       "result": "passed"
     },
@@ -359,7 +359,7 @@
       "cookies_sent": false,
       "content_type": "text/plain",
       "bytes": 4199988,
-      "sha256": "1fda57ada70e0a910e897317f9b57abf0cb4f25b9cb0cc8a632e801685cc2c12",
+      "sha256": "98b353c2512c1cb7608a7245d2bcd711b704218b05d9625216d086a0bb43c18a",
       "rules": 160797,
       "result": "passed"
     },
@@ -371,7 +371,7 @@
       "cookies_sent": false,
       "content_type": "text/plain",
       "bytes": 4199997,
-      "sha256": "73c83d80056f2d83f41e63d00316832bdad79b9e86898ab9572817c3efc0ab22",
+      "sha256": "2a44d653a62531e8963921d997e3a63e817ec60dcdc5e674c92ba47fb9f0cbe9",
       "rules": 161370,
       "result": "passed"
     },
@@ -383,7 +383,7 @@
       "cookies_sent": false,
       "content_type": "text/plain",
       "bytes": 4199990,
-      "sha256": "b41a87ef004188079f455ff6d88f7c605edbb3819efb6d1f42a1e5027be4a348",
+      "sha256": "566577e3bc0af353b58a4702782663e55607aa68f4fdf110a44d0172e60f6a16",
       "rules": 161890,
       "result": "passed"
     },
@@ -395,7 +395,7 @@
       "cookies_sent": false,
       "content_type": "text/plain",
       "bytes": 4199992,
-      "sha256": "748f0e7e881507fecdb3ff61d6e45c93f08fb55ca357fca3e7ca869d2f756301",
+      "sha256": "05498e98b6e71fcc8e6e4678e95a5d3133ba73ab000794291cc6bef9f34d8f7a",
       "rules": 161029,
       "result": "passed"
     },
@@ -407,7 +407,7 @@
       "cookies_sent": false,
       "content_type": "text/plain",
       "bytes": 4199984,
-      "sha256": "00f1d3d430a05e3c9c2f0280142d15b41dd705495a5b17662f18ec6caf85251c",
+      "sha256": "fdbc666ac9db9a9734d41e39a7e62ac71de0c8066b918d62206e780b6f014257",
       "rules": 162222,
       "result": "passed"
     },
@@ -419,7 +419,7 @@
       "cookies_sent": false,
       "content_type": "text/plain",
       "bytes": 4199996,
-      "sha256": "72b751b16ee187349b93854720930141cc99dfb38cabb94a8f4dc544cbd30aec",
+      "sha256": "9766f8032168274d073aff7ed31abaeee168821eb0cc537c8ebaf716fc54a566",
       "rules": 160992,
       "result": "passed"
     },
@@ -431,7 +431,7 @@
       "cookies_sent": false,
       "content_type": "text/plain",
       "bytes": 4199991,
-      "sha256": "e6e874e09075e3277a027ada2305ca708a7cc7c3c72ebbbf001d8b22435ea4c5",
+      "sha256": "da2f4292f9f13cc67f15253f1c3b0c8495ee315329aa1ae5a69deb1ab6e24c0d",
       "rules": 162411,
       "result": "passed"
     },
@@ -443,7 +443,7 @@
       "cookies_sent": false,
       "content_type": "text/plain",
       "bytes": 4199991,
-      "sha256": "6f9b37979029ab1cf3cf36e1a9e726793c2dfd988695c05f954f139511295111",
+      "sha256": "31d1ce7de832c5fea512f5cf758ffbab8f60f397f54f58350cbaff9d7b492b2a",
       "rules": 160232,
       "result": "passed"
     },
@@ -455,7 +455,7 @@
       "cookies_sent": false,
       "content_type": "text/plain",
       "bytes": 4199990,
-      "sha256": "9f780c47f6f6107118d6c7d0efff99aac9f341678ca1ea75065eaa6b33706d59",
+      "sha256": "f8d831c8342b705810784ca241be8d1fc417b79bf30603e17fcdd4dfa356ffa5",
       "rules": 161468,
       "result": "passed"
     },
@@ -467,7 +467,7 @@
       "cookies_sent": false,
       "content_type": "text/plain",
       "bytes": 4199992,
-      "sha256": "06b4f0a88f296fb0fd306880148d82c36db8fb681eef396cae6ae56a89df39f9",
+      "sha256": "05b4de6691b4ae32e89161072ab2537aa2355d6783f271b5e5e2ff7777e6a7ea",
       "rules": 146038,
       "result": "passed"
     },
@@ -479,7 +479,7 @@
       "cookies_sent": false,
       "content_type": "text/plain",
       "bytes": 414780,
-      "sha256": "74e8c2eacd9c049ebe7ad3a6c29db6655a9bf21c1ecb3b1949036a76fa3581b6",
+      "sha256": "ce99f7d825ce918a14c83d6af69e3428bdd26ecdf42116f46fbd7fca4f4d9039",
       "rules": 14046,
       "result": "passed"
     }

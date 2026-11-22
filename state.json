@@ -1,6 +1,6 @@
 {
   "project_version": "1.0.0",
-  "last_checkpoint": "2026-11-21T19:25:12.396708Z",
+  "last_checkpoint": "2026-11-22T07:00:44.483240Z",
   "current_stage": "published_and_verified",
   "completed_stages": [
     "sources",
@@ -16,10 +16,10 @@
   "pending_stages": [],
   "sources_configured": 9,
   "sources_working": 9,
-  "unique_rules": 5807395,
+  "unique_rules": 5811496,
   "generated_files": 41,
   "deployment_status": "verified",
-  "last_successful_build": "20261121T192253.602759Z",
-  "LAST_KNOWN_GOOD_BUILD": "20261121T192253.602759Z",
+  "last_successful_build": "20261122T065856.172067Z",
+  "LAST_KNOWN_GOOD_BUILD": "20261122T065856.172067Z",
   "next_action": "Check the last Actions run and public manifest; do not recreate infrastructure."
 }
